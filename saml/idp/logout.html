@@ -2,12 +2,12 @@
 <head>
     <title></title>
     //<!-- Following is the line for adding your SAP Customer Data Cloud API key -->
-    <SCRIPT type="text/javascript" lang="javascript" src="https://cdns.cn1.sapcdm.cn/js/gigya.js?apikey=4_gyPvUMrZgmsfCfPRJAmfcQ"></SCRIPT>
+    <SCRIPT type="text/javascript" lang="javascript" src="https://cdns.cn1.sapcdm.cn/js/gigya.js?apiKey=4_gyPvUMrZgmsfCfPRJAmfcQ"></SCRIPT>
     <title>Gigya - BTP Demo - Logout</title>
 </head>
 <body>
     <h1>Gigya - BTP Demo - Logout</h1>
-    <!--script>
+    <script>
         function onGigyaServiceReady(){
             gigya.accounts.addEventHandlers({onLogout:
                 function(response){
@@ -17,15 +17,6 @@
             });
             gigya.accounts.logout();
         }
-    </script-->
-    <script>
-        function afterLogout() {     
-            // Handle removal/deletion of any session cookies
-            // Define any additional logic to perform on the logged out user's browser
-            console.log(response);
-            alert("You have logged out!");
-        }
-        afterLogout();
     </script>
 </body>
 </html>
