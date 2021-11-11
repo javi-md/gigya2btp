@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title></title>
+    //<!-- Following is the line for adding your SAP Customer Data Cloud API key -->
+    <SCRIPT type="text/javascript" lang="javascript" src="http://cdns.cn1.sapcdm.cn/js/gigya.js?apikey=4_gyPvUMrZgmsfCfPRJAmfcQ"></SCRIPT>
+    <title>Gigya - BTP Demo - Login</title>
+</head>
+<body>
+    <h1>Gigya - BTP Demo - Login</h1>
+    <script>
+        function onGigyaServiceReady(){
+            gigya.accounts.addEventHandlers({onLogin:
+                function(response){
+                    console.log(response);
+                    gigya.fidm.saml.continueSSO();
+                }
+            });
+            gigya.accounts.showScreenSet({screenSet:'Default-RegistrationLogin', startScreen:'gigya-login-screen'});
+        }
+    </script>
+</body>
