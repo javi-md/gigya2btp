@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>Gigya - BTP Demo - Logout</h1>
-    <script>
+    <!--script>
         function onGigyaServiceReady(){
             gigya.accounts.addEventHandlers({onLogout:
                 function(response){
@@ -17,6 +17,15 @@
             });
             gigya.accounts.logout();
         }
+    </script-->
+    <script>
+        function afterLogout() {     
+            // Handle removal/deletion of any session cookies
+            // Define any additional logic to perform on the logged out user's browser
+            console.log(response);
+            alert("You have logged out!");
+        }
+        afterLogout();
     </script>
 </body>
 </html>
