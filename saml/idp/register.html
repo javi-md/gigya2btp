@@ -8,13 +8,13 @@
 <body>
     <h1>Gigya - BTP Demo</h1>
     <script>
-        function onGigyaServiceReady(){
+        /*function onGigyaServiceReady(){
             gigya.accounts.addEventHandlers({onLogin:
                 function(response){
                     console.log(response);
                     gigya.fidm.saml.continueSSO();
                 }
-            });
+            });*/
             gigya.accounts.showScreenSet({screenSet:'Default-RegistrationLogin', startScreen:'gigya-register-screen'});
         }
     </script>
