@@ -9,17 +9,15 @@
     <h1>Gigya - BTP Demo - Login</h1>
     <div id="container"></div>
     <script>
-        gigya.socialize.addEventHandlers({
-            onLogin: function() {
-                gigya.fidm.saml.continueSSO();
-            }
-        });
- 
-        gigya.accounts.showScreenSet({
-                screenSet: 'Default-RegistrationLogin',
-                containerID: "container",
-                sessionExpiration: '20000'
-        });
+        function onGigyaServiceReady(){
+            gigya.accounts.addEventHandlers({onLogin:
+                function(response){
+                    console.log(response);
+                    gigya.fidm.saml.continueSSO();
+                }
+            });
+            gigya.accounts.showScreenSet({screenSet:'Default-RegistrationLogin', startScreen:'gigya-login-screen'});
+        }
     </script>   
 </body>
 </html>
