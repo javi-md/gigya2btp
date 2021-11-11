@@ -10,12 +10,11 @@
     <div id="container"></div>
     <script>
         function onGigyaServiceReady(){
-            gigya.accounts.addEventHandlers({onLogin:
-                function(response){
-                    console.log(response);
-                    gigya.fidm.saml.continueSSO();
-                }
-            });
+            gigya.socialize.addEventHandlers({
+            onLogin: function() {
+                gigya.fidm.saml.continueSSO();
+            }
+        });
             gigya.accounts.showScreenSet({screenSet:'Default-RegistrationLogin', startScreen:'gigya-login-screen'});
         }
     </script>   
